@@ -13,7 +13,11 @@
         exit();
     }
     if (file_exists('pages/' . $_GET['page'] . '.php') {
-        include 'pages/' . $_GET['page'] . '.php';
+        if (!$has_permission_todo) { //make check to see if they have permission
+            include 'pages/errors/nopermission.php');
+        } else {
+            include 'pages/' . $_GET['page'] . '.php';
+        }
     } else {
         include 'pages/errors/404.php';
     }
