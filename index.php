@@ -4,7 +4,7 @@
     // Website: Coming Soon
     // Docs: Coming Soon
     // --------------------
-$debug = false;
+    $debug = false;
     if ($debug == true) {
         echo $_GET['page'];
     }
